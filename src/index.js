@@ -4,7 +4,7 @@ import { FirebaseUtil } from './util';
 let options = FirebaseUtil.createOptionsFromEnvironment();
 
 admin.initializeApp({
-    credential: admin.credential.cert(require(options.credential)),
+    credential: admin.credential.cert(options.credential),
     databaseURL: options.databaseURL
 });
 
